@@ -1,11 +1,13 @@
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body */
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background: #0d1117;
     color: white;
 }
@@ -19,6 +21,7 @@ nav {
     background: linear-gradient(90deg, purple, orange);
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .logo {
@@ -36,13 +39,14 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 nav ul li a:hover {
     color: #ddd;
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
     display: flex;
     justify-content: space-around;
@@ -59,6 +63,11 @@ nav ul li a:hover {
     color: #a855f7;
 }
 
+.left p {
+    margin: 10px 0;
+}
+
+/* Button */
 button {
     padding: 10px 20px;
     background: #a855f7;
@@ -66,35 +75,48 @@ button {
     color: white;
     margin-top: 10px;
     cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 button:hover {
     background: #9333ea;
 }
 
-/* Terminal */
+/* Terminal Box */
 .terminal {
     background: #161b22;
     padding: 20px;
     border-radius: 10px;
+    width: 250px;
 }
 
 .green { color: #00ff99; }
 .blue { color: #00bfff; }
 
-/* Sections */
+/* Section Common */
 .section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
 }
 
-/* Cards */
+.section h1,
+.section h2 {
+    margin-bottom: 15px;
+}
+
+/* Cards (Projects / Experience etc.) */
 .card {
     background: #161b22;
     margin: 20px auto;
     padding: 20px;
     width: 300px;
     border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 /* Footer */
@@ -102,22 +124,36 @@ footer {
     text-align: center;
     padding: 20px;
     background: #161b22;
+    margin-top: 50px;
 }
 
-/* Smooth scroll */
+/* Smooth Scroll */
 html {
     scroll-behavior: smooth;
 }
 
-/* Mobile responsive */
+/* Responsive (Mobile) */
 @media(max-width: 768px) {
-    .hero {
+
+    nav {
         flex-direction: column;
-        text-align: center;
+        gap: 10px;
     }
 
     nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 10px;
         font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    .terminal {
+        margin-top: 20px;
     }
 }
