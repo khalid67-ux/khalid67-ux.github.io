@@ -1,15 +1,29 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial;
     background: #0d1117;
     color: white;
 }
 
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    align-items: center;
+    padding: 15px 30px;
     background: linear-gradient(90deg, purple, orange);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 nav ul {
@@ -18,11 +32,27 @@ nav ul {
     gap: 20px;
 }
 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* Hero */
 .hero {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
+    padding: 20px;
+}
+
+.left h1 {
+    font-size: 40px;
 }
 
 .left span {
@@ -34,10 +64,16 @@ button {
     background: #a855f7;
     border: none;
     color: white;
+    margin-top: 10px;
     cursor: pointer;
 }
 
-.box {
+button:hover {
+    background: #9333ea;
+}
+
+/* Terminal */
+.terminal {
     background: #161b22;
     padding: 20px;
     border-radius: 10px;
@@ -46,11 +82,13 @@ button {
 .green { color: #00ff99; }
 .blue { color: #00bfff; }
 
-.projects {
+/* Sections */
+.section {
+    padding: 60px 20px;
     text-align: center;
-    padding: 50px;
 }
 
+/* Cards */
 .card {
     background: #161b22;
     margin: 20px auto;
@@ -59,8 +97,27 @@ button {
     border-radius: 10px;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background: #161b22;
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mobile responsive */
+@media(max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 10px;
+        font-size: 14px;
+    }
 }
