@@ -1,26 +1,46 @@
-// Page load message
+// ================= PAGE LOAD =================
 console.log("Portfolio Loaded Successfully");
 
-// ================= TYPING EFFECT =================
-const text = "Web Developer";
-let index = 0;
+// ================= MULTI TYPING EFFECT =================
+const roles = ["Web Developer", "Programmer", "AI Enthusiast"];
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
 function typeEffect() {
-    if (index < text.length) {
-        document.getElementById("typing-role").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 100);
+    const currentRole = roles[roleIndex];
+    const typingElement = document.getElementById("typing-role");
+
+    if (!typingElement) return;
+
+    if (!isDeleting) {
+        typingElement.innerHTML = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentRole.length) {
+            isDeleting = true;
+            setTimeout(typeEffect, 1000); // pause
+            return;
+        }
+    } else {
+        typingElement.innerHTML = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            isDeleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+        }
     }
+
+    setTimeout(typeEffect, isDeleting ? 50 : 100);
 }
 
-// Run typing after page load
+// ================= RUN ON LOAD =================
 window.onload = function () {
-    if (document.getElementById("typing-role")) {
-        typeEffect();
-    }
+    typeEffect();
 };
 
-// ================= SMOOTH SCROLL (extra safe) =================
+// ================= SMOOTH SCROLL =================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         const target = document.querySelector(this.getAttribute("href"));
