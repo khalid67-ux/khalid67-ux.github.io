@@ -23,6 +23,9 @@ nav {
     align-items: center;
     padding: 15px 30px;
     background: linear-gradient(90deg, purple, orange);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 .logo {
@@ -60,12 +63,38 @@ main {
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 42px;
+/* Welcome text */
+.welcome {
+    font-size: 18px;
+    color: #a855f7;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
 }
 
-.hero span {
+/* Profile Image */
+.home-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #a855f7;
+    margin: 15px 0;
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(168,85,247,0.5);
+}
+
+/* Role */
+.role {
+    font-size: 14px;
     color: #a855f7;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+/* Name */
+.hero h1 {
+    font-size: 42px;
+    margin: 5px 0;
 }
 
 /* Subtitle */
@@ -75,13 +104,7 @@ main {
     color: #ccc;
 }
 
-/* Description */
-.hero-text {
-    margin-top: 10px;
-    color: #aaa;
-}
-
-/* Buttons */
+/* ================= BUTTON ================= */
 .hero-buttons {
     margin-top: 20px;
 }
@@ -101,27 +124,6 @@ main {
     background: #9333ea;
 }
 
-.outline {
-    background: transparent;
-    border: 1px solid white;
-}
-
-.outline:hover {
-    background: white;
-    color: black;
-}
-
-/* ================= HOME IMAGE ================= */
-.home-img {
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    border: 3px solid #a855f7;
-    margin-bottom: 15px;
-    object-fit: cover;
-    box-shadow: 0 0 20px rgba(168,85,247,0.4);
-}
-
 /* ================= CARD ================= */
 .card {
     background: #161b22;
@@ -136,7 +138,7 @@ main {
     transform: translateY(-5px);
 }
 
-/* ================= ABOUT PAGE ================= */
+/* ================= ABOUT ================= */
 .about-container {
     display: flex;
     justify-content: space-between;
@@ -156,7 +158,6 @@ main {
     position: relative;
 }
 
-/* underline */
 .about-left h1::after {
     content: "";
     width: 60px;
@@ -178,7 +179,6 @@ main {
     font-weight: bold;
 }
 
-/* Info boxes */
 .about-box {
     background: #161b22;
     padding: 14px;
@@ -192,11 +192,73 @@ main {
     transform: translateX(5px);
 }
 
-/* About Image */
 .about-right img {
     width: 250px;
     border-radius: 12px;
     box-shadow: 0 0 25px rgba(168,85,247,0.4);
+}
+
+/* ================= EDUCATION ================= */
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.edu-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.edu-card {
+    background: #161b22;
+    padding: 25px;
+    width: 280px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.edu-card:hover {
+    transform: translateY(-5px);
+}
+
+.edu-place {
+    color: #a855f7;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* ================= SKILLS ================= */
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background: #161b22;
+    padding: 25px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    color: #a855f7;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    margin: 5px 0;
+    color: #ccc;
 }
 
 /* ================= FOOTER ================= */
@@ -204,6 +266,7 @@ footer {
     text-align: center;
     padding: 15px;
     background: #161b22;
+    margin-top: auto;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -241,74 +304,4 @@ footer {
     .about-right {
         margin-top: 20px;
     }
-}
-/* ===== EDUCATION ===== */
-
-.section-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.edu-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.edu-card {
-    background: #161b22;
-    padding: 25px;
-    width: 280px;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.edu-card:hover {
-    transform: translateY(-5px);
-}
-
-.edu-place {
-    color: #a855f7;
-    font-weight: bold;
-    margin: 10px 0;
-}
-/* ===== SKILLS ===== */
-
-.skills-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.skill-card {
-    background: #161b22;
-    padding: 25px;
-    width: 250px;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-}
-
-.skill-card h3 {
-    color: #a855f7;
-    margin-bottom: 10px;
-}
-
-.skill-card p {
-    margin: 5px 0;
-    color: #ccc;
-}
-.role {
-    font-size: 16px;
-    color: #a855f7;
-    letter-spacing: 2px;
-    margin-bottom: 5px;
-    text-transform: uppercase;
 }
