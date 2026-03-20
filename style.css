@@ -9,14 +9,14 @@ html, body {
 }
 
 body {
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     background: #0d1117;
     color: white;
     display: flex;
     flex-direction: column;
 }
 
-/* Navbar */
+/* ================= NAVBAR ================= */
 nav {
     display: flex;
     justify-content: space-between;
@@ -27,6 +27,7 @@ nav {
 
 .logo {
     font-weight: bold;
+    font-size: 18px;
 }
 
 nav ul {
@@ -39,32 +40,141 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-/* Main Content */
+nav ul li a:hover {
+    color: #ddd;
+}
+
+/* ================= MAIN ================= */
 main {
     flex: 1;
     padding: 50px;
     text-align: center;
 }
 
-/* Hero */
+/* ================= HERO ================= */
 .hero {
     margin-top: 100px;
 }
 
-/* Cards */
+/* ================= CARD ================= */
 .card {
     background: #161b22;
     padding: 20px;
     margin: 20px auto;
     width: 300px;
     border-radius: 10px;
+    transition: 0.3s;
 }
 
-/* Footer */
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ================= ABOUT PAGE ================= */
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
+    flex: 1;
+}
+
+/* Left */
+.about-left {
+    max-width: 550px;
+    text-align: left;
+}
+
+.about-left h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* underline */
+.about-left h1::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, purple, orange);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+}
+
+/* Text */
+.about-text {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+/* Highlight */
+.about-text span {
+    color: #a855f7;
+    font-weight: bold;
+}
+
+/* Boxes */
+.about-box {
+    background: #161b22;
+    padding: 14px;
+    margin: 12px 0;
+    border-left: 4px solid #a855f7;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.about-box:hover {
+    transform: translateX(5px);
+}
+
+/* Right Image */
+.about-right img {
+    width: 250px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(168,85,247,0.3);
+}
+
+/* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 15px;
     background: #161b22;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-left {
+        text-align: center;
+    }
+
+    .about-left h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .about-right {
+        margin-top: 20px;
+    }
 }
