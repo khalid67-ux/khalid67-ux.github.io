@@ -305,3 +305,10 @@ footer {
     margin: 5px 0;
     color: #ccc;
 }
+.role {
+    font-size: 16px;
+    color: #a855f7;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
