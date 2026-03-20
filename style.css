@@ -242,3 +242,35 @@ footer {
         margin-top: 20px;
     }
 }
+/* ===== EDUCATION ===== */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.edu-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.edu-card {
+    background: #161b22;
+    padding: 25px;
+    width: 280px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.edu-card:hover {
+    transform: translateY(-5px);
+}
+
+.edu-place {
+    color: #a855f7;
+    font-weight: bold;
+    margin: 10px 0;
+}
