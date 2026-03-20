@@ -10,8 +10,8 @@ html, body {
 
 body {
     font-family: Arial, sans-serif;
-    background: #0d1117;
-    color: white;
+    background: #f9fafb; /* WHITE BACKGROUND */
+    color: #111; /* DARK TEXT */
     display: flex;
     flex-direction: column;
 }
@@ -31,6 +31,7 @@ nav {
 .logo {
     font-weight: bold;
     font-size: 18px;
+    color: white;
 }
 
 nav ul {
@@ -47,7 +48,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ddd;
+    color: #eee;
 }
 
 /* ================= MAIN ================= */
@@ -63,7 +64,7 @@ main {
     text-align: center;
 }
 
-/* Welcome text */
+/* Welcome */
 .welcome {
     font-size: 18px;
     color: #a855f7;
@@ -79,7 +80,7 @@ main {
     border: 3px solid #a855f7;
     margin: 15px 0;
     object-fit: cover;
-    box-shadow: 0 0 20px rgba(168,85,247,0.5);
+    box-shadow: 0 0 15px rgba(168,85,247,0.3);
 }
 
 /* Role */
@@ -95,13 +96,14 @@ main {
 .hero h1 {
     font-size: 42px;
     margin: 5px 0;
+    color: #111;
 }
 
 /* Subtitle */
 .subtitle {
     margin-top: 10px;
     font-size: 18px;
-    color: #ccc;
+    color: #555;
 }
 
 /* ================= BUTTON ================= */
@@ -126,12 +128,13 @@ main {
 
 /* ================= CARD ================= */
 .card {
-    background: #161b22;
+    background: white;
     padding: 20px;
     margin: 20px auto;
     width: 300px;
     border-radius: 10px;
     transition: 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .card:hover {
@@ -171,7 +174,7 @@ main {
 .about-text {
     margin-bottom: 15px;
     line-height: 1.7;
-    color: #ccc;
+    color: #444;
 }
 
 .about-text span {
@@ -180,12 +183,13 @@ main {
 }
 
 .about-box {
-    background: #161b22;
+    background: white;
     padding: 14px;
     margin: 12px 0;
     border-left: 4px solid #a855f7;
     border-radius: 6px;
     transition: 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
 .about-box:hover {
@@ -195,7 +199,6 @@ main {
 .about-right img {
     width: 250px;
     border-radius: 12px;
-    box-shadow: 0 0 25px rgba(168,85,247,0.4);
 }
 
 /* ================= EDUCATION ================= */
@@ -212,12 +215,13 @@ main {
 }
 
 .edu-card {
-    background: #161b22;
+    background: white;
     padding: 25px;
     width: 280px;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .edu-card:hover {
@@ -239,12 +243,13 @@ main {
 }
 
 .skill-card {
-    background: #161b22;
+    background: white;
     padding: 25px;
     width: 250px;
     border-radius: 10px;
     text-align: center;
     transition: 0.3s;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .skill-card:hover {
@@ -258,14 +263,15 @@ main {
 
 .skill-card p {
     margin: 5px 0;
-    color: #ccc;
+    color: #444;
 }
 
 /* ================= FOOTER ================= */
 footer {
     text-align: center;
     padding: 15px;
-    background: #161b22;
+    background: #f1f1f1;
+    color: #333;
     margin-top: auto;
 }
 
