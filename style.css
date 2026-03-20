@@ -274,3 +274,34 @@ footer {
     font-weight: bold;
     margin: 10px 0;
 }
+/* ===== SKILLS ===== */
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background: #161b22;
+    padding: 25px;
+    width: 250px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card h3 {
+    color: #a855f7;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    margin: 5px 0;
+    color: #ccc;
+}
