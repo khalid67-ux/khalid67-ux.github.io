@@ -352,3 +352,69 @@ footer {
 .contact-card a:hover {
     text-decoration: underline;
 }
+/* ===== CERTIFICATE ===== */
+
+.cert-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cert-card {
+    background: #161b22;
+    width: 260px;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+}
+
+.cert-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.cert-card h3 {
+    padding: 10px;
+    color: #a855f7;
+}
+
+.cert-card p {
+    padding-bottom: 10px;
+    color: #ccc;
+}
+
+/* ===== POPUP IMAGE ===== */
+
+#popup {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#popup img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#popup span {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
