@@ -352,20 +352,19 @@ footer {
 .contact-card a:hover {
     text-decoration: underline;
 }
-/* ===== CERTIFICATE ===== */
-
+/* Certificate Section */
 .cert-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
 }
 
 .cert-card {
+    width: 250px;
     background: #161b22;
-    width: 260px;
+    padding: 15px;
     border-radius: 10px;
-    overflow: hidden;
     text-align: center;
     transition: 0.3s;
 }
@@ -376,45 +375,23 @@ footer {
 
 .cert-card img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    border-radius: 8px;
     cursor: pointer;
+    margin-bottom: 10px;
 }
 
-.cert-card h3 {
-    padding: 10px;
-    color: #a855f7;
-}
-
-.cert-card p {
-    padding-bottom: 10px;
-    color: #ccc;
-}
-
-/* ===== POPUP IMAGE ===== */
-
-#popup {
-    position: fixed;
-    display: none;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    justify-content: center;
-    align-items: center;
-}
-
-#popup img {
-    max-width: 90%;
-    max-height: 90%;
-}
-
-#popup span {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 30px;
+/* Download Button */
+.download-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #a855f7;
     color: white;
-    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #9333ea;
 }
