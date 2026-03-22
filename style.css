@@ -63,7 +63,7 @@ nav ul li a.active {
 /* ================= MAIN ================= */
 main {
     flex: 1;
-    padding-top: 120px;  /* navbar height + gap */
+    padding-top: 60px;  /* navbar height + gap */
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 50px;
