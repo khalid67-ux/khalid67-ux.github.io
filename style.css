@@ -556,7 +556,7 @@ footer {
     font-weight: bold;
     transition: 0.3s;
 }
-/* ===== SECONDARY BUTTON (Research) ===== */
+/* ===== RESEARCH BUTTON (FULL GRADIENT) ===== */
 .btn-secondary {
     padding: 10px 22px;
     border-radius: 25px;
@@ -564,20 +564,18 @@ footer {
     font-weight: 500;
     cursor: pointer;
 
-    /* Gradient Border */
-    border: 2px solid transparent;
-    background: linear-gradient(#fff, #fff) padding-box,
-                linear-gradient(90deg, #9333ea, orange) border-box;
+    /* FULL GRADIENT COLOR */
+    background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    color: white;
+    border: none;
 
-    color: #9333ea;
     transition: 0.3s;
 }
 
-/* HOVER */
+/* HOVER EFFECT */
 .btn-secondary:hover {
-    background: linear-gradient(90deg, #9333ea, orange);
-    color: white;
     transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(59,130,246,0.4);
 }
 /* ===== RESEARCH BUTTON ===== */
 .research-btn {
