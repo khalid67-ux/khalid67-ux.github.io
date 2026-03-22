@@ -21,6 +21,10 @@ function setActiveNav() {
     links.forEach(link => {
         const linkPage = link.getAttribute("href");
 
+        // ❌ Skip Home button
+        if (linkPage === "index.html") return;
+
+        // ✅ Activate others
         if (linkPage === currentPage) {
             link.classList.add("active");
         }
