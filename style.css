@@ -248,3 +248,47 @@ footer {
         flex-direction: column;
     }
 }
+/* ===== HERO BUTTONS ===== */
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* button gap */
+    flex-wrap: wrap; /* mobile e nicely wrap korbe */
+}
+
+/* Primary Button */
+.btn-primary {
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, purple, orange);
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Secondary Button */
+.btn-secondary {
+    padding: 10px 25px;
+    border-radius: 25px;
+    border: 2px solid #a855f7;
+    background: transparent;
+    color: #a855f7;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover Effects */
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(168,85,247,0.5);
+}
+
+.btn-secondary:hover {
+    background: #a855f7;
+    color: white;
+    transform: scale(1.05);
+}
