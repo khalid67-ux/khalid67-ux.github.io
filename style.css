@@ -119,72 +119,94 @@ main {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-
-.about-section {
-    padding: 80px 10%;
-    background: #0f0f1a;
-    color: white;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 40px;
-    margin-bottom: 40px;
-    position: relative;
-}
-
-.section-title::after {
-    content: "";
-    width: 80px;
-    height: 3px;
-    background: orange;
-    display: block;
-    margin: 10px auto;
-}
+/* ================= ABOUT ================= */
 
 .about-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 80px 10%;
     gap: 50px;
 }
 
 /* LEFT */
-.about-text {
-    flex: 1;
+.about-left {
+    max-width: 600px;
 }
 
-.about-text p {
-    font-size: 18px;
-    line-height: 1.7;
+.section-title {
+    font-size: 36px;
     margin-bottom: 20px;
-    color: #ccc;
+    text-align: left;
+}
+
+/* TEXT */
+.about-text {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: #444;
+    font-size: 15px;
 }
 
 .about-text span {
-    color: #9b5cff;
+    color: #9333ea;
     font-weight: bold;
 }
 
-/* CARDS */
-.about-cards .card {
-    background: #1a1a2e;
-    padding: 15px 20px;
-    margin-top: 15px;
-    border-radius: 10px;
+/* ===== CARD STYLE ===== */
+.about-box {
+    position: relative;
+    background: #ffffff;
+    padding: 14px;
+    margin: 12px 0;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
     transition: 0.3s;
 }
 
-.about-cards .card:hover {
-    background: #2a2a40;
+/* Gradient top line */
+.about-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #a855f7, orange);
+}
+
+/* Hover */
+.about-box:hover {
     transform: translateX(5px);
 }
 
 /* RIGHT IMAGE */
-.about-image img {
-    width: 300px;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(155, 92, 255, 0.5);
+.about-right img {
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .about-left {
+        text-align: center;
+    }
+
+    .about-right {
+        margin-top: 20px;
+    }
 }
 /* ===== EDUCATION SECTION ===== */
 
