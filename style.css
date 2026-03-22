@@ -62,9 +62,8 @@ nav ul li a.active {
 
 /* ================= MAIN ================= */
 main {
-    flex: 1;
-    padding: 50px;
-    text-align: center;
+    flex: none; /* আগে flex ছিল */
+    padding: 0;
 }
 
 /* ================= HERO ================= */
