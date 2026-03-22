@@ -1,5 +1,14 @@
 // ================= PAGE LOAD =================
-console.log("Portfolio Loaded Successfully");
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Portfolio Loaded Successfully");
+
+    // Typing Effect start
+    typeEffect();
+
+    // Smooth scroll safe run
+    smoothScroll();
+});
+
 
 // ================= MULTI TYPING EFFECT =================
 const roles = ["Web Developer", "Programmer", "AI Enthusiast"];
@@ -8,10 +17,12 @@ let charIndex = 0;
 let isDeleting = false;
 
 function typeEffect() {
-    const currentRole = roles[roleIndex];
     const typingElement = document.getElementById("typing-role");
 
+    // If not found (other pages), stop
     if (!typingElement) return;
+
+    const currentRole = roles[roleIndex];
 
     if (!isDeleting) {
         typingElement.innerHTML = currentRole.substring(0, charIndex + 1);
@@ -19,7 +30,7 @@ function typeEffect() {
 
         if (charIndex === currentRole.length) {
             isDeleting = true;
-            setTimeout(typeEffect, 1000); // pause
+            setTimeout(typeEffect, 1000);
             return;
         }
     } else {
@@ -35,20 +46,49 @@ function typeEffect() {
     setTimeout(typeEffect, isDeleting ? 50 : 100);
 }
 
-// ================= RUN ON LOAD =================
-window.onload = function () {
-    typeEffect();
-};
+
+// ================= CERTIFICATE POPUP =================
+function openImage(src) {
+    const popup = document.getElementById("popup");
+    const popupImg = document.getElementById("popup-img");
+
+    if (popup && popupImg) {
+        popup.style.display = "flex";
+        popupImg.src = src;
+    }
+}
+
+function closeImage() {
+    const popup = document.getElementById("popup");
+    if (popup) {
+        popup.style.display = "none";
+    }
+}
+
+
+// ================= CLOSE POPUP CLICK OUTSIDE =================
+document.addEventListener("click", function (e) {
+    const popup = document.getElementById("popup");
+    const img = document.getElementById("popup-img");
+
+    if (popup && e.target === popup) {
+        popup.style.display = "none";
+    }
+});
+
 
 // ================= SMOOTH SCROLL =================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-        const target = document.querySelector(this.getAttribute("href"));
-        if (target) {
-            e.preventDefault();
-            target.scrollIntoView({
-                behavior: "smooth"
-            });
-        }
+function smoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            const target = document.querySelector(this.getAttribute("href"));
+
+            if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+            }
+        });
     });
-});
+}
