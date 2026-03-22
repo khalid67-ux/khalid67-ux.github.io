@@ -382,65 +382,85 @@ footer {
     transition: 0.3s;
     cursor: pointer;
 }
-
-/* Hover করলে full color হবে */
-.research-btn:hover {
-    background: linear-gradient(90deg, purple, orange);
+/* ===== EXPERIENCE SECTION ===== */
+.exp-section {
+    background: #0d1117;
     color: white;
-    border: none;
-    box-shadow: 0 0 10px rgba(168,85,247,0.6);
-}
-/* ===== EXPERIENCE CONTAINER ===== */
-.exp-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    padding: 80px 10%;
 }
 
-/* ===== CARD ===== */
-.exp-card {
-    background: white;
-    width: 280px;
+.exp-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+/* ===== TIMELINE ===== */
+.timeline {
+    position: relative;
+    margin-left: 30px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #a855f7;
+}
+
+/* ===== ITEM ===== */
+.timeline-item {
+    display: flex;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* Circle */
+.circle {
+    width: 40px;
+    height: 40px;
+    background: #161b22;
+    border: 2px solid #a855f7;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+/* Card */
+.content {
+    background: #161b22;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
-    text-align: left;
+    width: 100%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
-.exp-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-/* Title */
-.exp-card h3 {
+/* Date */
+.date {
+    color: #a855f7;
+    font-size: 14px;
     margin-bottom: 5px;
 }
 
-/* Subtitle (purple gradient) */
-.exp-sub {
-    background: linear-gradient(90deg, purple, orange);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* Text */
-.exp-card p {
-    font-size: 14px;
-    color: #444;
+/* Company */
+.company {
+    color: #00ffcc;
     margin-bottom: 10px;
 }
 
 /* Tags */
-.tag {
+.tags span {
     display: inline-block;
-    background: #f3f4f6;
+    background: #222;
     padding: 5px 10px;
-    margin: 3px;
+    margin: 4px;
     border-radius: 20px;
     font-size: 12px;
+    color: #00ffcc;
 }
