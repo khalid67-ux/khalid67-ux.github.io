@@ -556,27 +556,26 @@ footer {
     font-weight: bold;
     transition: 0.3s;
 }
-
-/* Secondary Button */
+/* ===== SECONDARY BUTTON (Research) ===== */
 .btn-secondary {
-    padding: 10px 25px;
+    padding: 10px 22px;
     border-radius: 25px;
-    border: 2px solid #a855f7;
-    background: transparent;
-    color: #a855f7;
-    font-weight: bold;
+    font-size: 14px;
+    font-weight: 500;
     cursor: pointer;
+
+    /* Gradient Border */
+    border: 2px solid transparent;
+    background: linear-gradient(#fff, #fff) padding-box,
+                linear-gradient(90deg, #9333ea, orange) border-box;
+
+    color: #9333ea;
     transition: 0.3s;
 }
 
-/* Hover Effects */
-.btn-primary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(168,85,247,0.5);
-}
-
+/* HOVER */
 .btn-secondary:hover {
-    background: #a855f7;
+    background: linear-gradient(90deg, #9333ea, orange);
     color: white;
     transform: scale(1.05);
 }
@@ -858,29 +857,5 @@ footer {
 /* BUTTON HOVER */
 .project-btn:hover {
     opacity: 0.85;
-    transform: scale(1.05);
-}
-/* ===== RESEARCH BUTTON ===== */
-.research-btn {
-    display: inline-block;
-    padding: 10px 22px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-
-    /* Gradient Border Look */
-    border: 2px solid transparent;
-    background: linear-gradient(#fff, #fff) padding-box,
-                linear-gradient(90deg, #9333ea, orange) border-box;
-
-    color: #9333ea;
-    transition: 0.3s;
-}
-
-/* HOVER EFFECT */
-.research-btn:hover {
-    background: linear-gradient(90deg, #9333ea, orange);
-    color: #fff;
     transform: scale(1.05);
 }
