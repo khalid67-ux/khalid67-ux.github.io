@@ -309,6 +309,7 @@ main {
 
 /* ===== SKILL CARD ===== */
 .skill-card {
+    position: relative;
     background: white;
     padding: 25px;
     width: 260px;
@@ -316,21 +317,33 @@ main {
     text-align: center;
     transition: 0.3s;
     box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    overflow: hidden;
 }
 
-/* hover effect */
+/* ===== Gradient Top Line ===== */
+.skill-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #a855f7, orange);
+}
+
+/* ===== Hover Effect ===== */
 .skill-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-/* title */
+/* ===== Title ===== */
 .skill-card h3 {
     color: #9333ea;
     margin-bottom: 12px;
 }
 
-/* text */
+/* ===== Text ===== */
 .skill-card p {
     margin: 6px 0;
     color: #444;
