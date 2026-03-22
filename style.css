@@ -534,3 +534,23 @@ footer {
         padding: 50px 20px;
     }
 }
+/* ===== GLOBAL CARD CENTER ALIGN ===== */
+
+/* সব ধরনের card detect করে center করবে */
+[class*="card"] {
+    text-align: center;
+}
+
+/* card এর ভিতরের সব text */
+[class*="card"] h1,
+[class*="card"] h2,
+[class*="card"] h3,
+[class*="card"] p,
+[class*="card"] span {
+    text-align: center;
+}
+
+/* experience tags center */
+.tags {
+    text-align: center;
+}
