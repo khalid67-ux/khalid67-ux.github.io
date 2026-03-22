@@ -352,30 +352,50 @@ footer {
 .contact-card a:hover {
     text-decoration: underline;
 }
-/* ===== CERTIFICATION FIX ===== */
+/* ===== CERTIFICATION ===== */
 
 .cert-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
 }
 
 .cert-card {
     background: #161b22;
     padding: 15px;
-    border-radius: 10px;
+    width: 300px;
+    border-radius: 12px;
     text-align: center;
+    transition: 0.3s;
 }
 
+.cert-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Image */
 .cert-card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-/* Download button */
+/* Title */
+.cert-card h3 {
+    color: #a855f7;
+    margin-bottom: 5px;
+}
+
+/* Text */
+.cert-card p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+/* Download Button */
 .download-btn {
     display: inline-block;
     padding: 8px 15px;
@@ -383,5 +403,9 @@ footer {
     color: white;
     border-radius: 6px;
     text-decoration: none;
-    margin-top: 8px;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #9333ea;
 }
