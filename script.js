@@ -1,13 +1,31 @@
 // ================= PAGE LOAD =================
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("Portfolio Loaded Successfully");
+    console.log("Portfolio Loaded Successfully 🚀");
 
-    // Typing Effect start
     typeEffect();
-
-    // Smooth scroll safe run
     smoothScroll();
+    setActiveNav(); // ✅ NEW
 });
+
+
+// ================= AUTO ACTIVE NAVBAR =================
+function setActiveNav() {
+    const links = document.querySelectorAll("nav ul li a");
+
+    let currentPage = window.location.pathname.split("/").pop();
+
+    if (currentPage === "") {
+        currentPage = "index.html";
+    }
+
+    links.forEach(link => {
+        const linkPage = link.getAttribute("href");
+
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        }
+    });
+}
 
 
 // ================= MULTI TYPING EFFECT =================
@@ -19,7 +37,6 @@ let isDeleting = false;
 function typeEffect() {
     const typingElement = document.getElementById("typing-role");
 
-    // If not found (other pages), stop
     if (!typingElement) return;
 
     const currentRole = roles[roleIndex];
@@ -69,7 +86,6 @@ function closeImage() {
 // ================= CLOSE POPUP CLICK OUTSIDE =================
 document.addEventListener("click", function (e) {
     const popup = document.getElementById("popup");
-    const img = document.getElementById("popup-img");
 
     if (popup && e.target === popup) {
         popup.style.display = "none";
