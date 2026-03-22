@@ -390,3 +390,9 @@ footer {
     border: none;
     box-shadow: 0 0 10px rgba(168,85,247,0.6);
 }
+/* ===== EXPERIENCE SUB TITLE ===== */
+.exp-sub {
+    color: #9333ea; /* purple */
+    font-weight: bold;
+    margin: 5px 0;
+}
