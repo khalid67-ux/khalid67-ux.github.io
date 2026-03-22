@@ -763,3 +763,28 @@ footer {
 .tags {
     text-align: center;
 }
+.research-card {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Gradient Header Effect */
+.research-card h3 {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.research-card p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.6;
+}
