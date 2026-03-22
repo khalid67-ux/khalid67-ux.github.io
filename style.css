@@ -409,3 +409,25 @@ footer {
 .download-btn:hover {
     background: #9333ea;
 }
+/* ===== NAVBAR EFFECT ===== */
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background: white;
+    color: black;
+}
+
+/* Active page (clicked page) */
+nav ul li a.active {
+    background: white;
+    color: black;
+}
