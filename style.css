@@ -297,36 +297,44 @@ main {
     font-size: 14px;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE (MODIFIED) ===== */
+
+/* Tablet */
 @media (max-width: 1024px) {
     .edu-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 🔥 3 card same */
+        gap: 15px;
+    }
+
+    .edu-card {
+        padding: 18px;
     }
 }
 
+/* Mobile */
 @media (max-width: 768px) {
     .edu-container {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 🔥 still 3 */
+        gap: 10px;
+        padding: 15px 5%;
     }
-}
-/* ===== SKILLS TITLE ===== */
-.section-title {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
-    position: relative;
-}
 
-/* underline design */
-.section-title::after {
-    content: "";
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(90deg, purple, orange);
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    transform: translateX(-50%);
+    .edu-card {
+        padding: 12px;
+        max-width: 100%; /* important */
+    }
+
+    .edu-card h3 {
+        font-size: 13px;
+    }
+
+    .edu-place {
+        font-size: 12px;
+    }
+
+    .edu-year {
+        font-size: 11px;
+    }
 }
 
 /* ===== SKILLS CONTAINER ===== */
