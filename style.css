@@ -62,8 +62,11 @@ nav ul li a.active {
 
 /* ================= MAIN ================= */
 main {
-    flex: none; /* আগে flex ছিল */
-    padding: 0;
+    flex: 1;
+    padding-top: 120px;  /* navbar height + gap */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
 }
 
 /* ================= HERO ================= */
