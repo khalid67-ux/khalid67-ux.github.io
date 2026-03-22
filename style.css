@@ -292,3 +292,22 @@ footer {
     color: white;
     transform: scale(1.05);
 }
+/* ===== RESEARCH BUTTON ===== */
+.research-btn {
+    padding: 10px 22px;
+    border-radius: 25px;
+    border: 2px solid #a855f7;
+    color: #a855f7;
+    background: transparent;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* Hover করলে full color হবে */
+.research-btn:hover {
+    background: linear-gradient(90deg, purple, orange);
+    color: white;
+    border: none;
+    box-shadow: 0 0 10px rgba(168,85,247,0.6);
+}
