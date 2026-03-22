@@ -382,14 +382,15 @@ footer {
     transition: 0.3s;
     cursor: pointer;
 }
-/* ===== EXPERIENCE SECTION ===== */
+/* ================= EXPERIENCE SECTION ================= */
+
 .exp-section {
     background: #ffffff;
     color: black;
     padding: 80px 10%;
 }
 
-/* Title */
+/* ===== TITLE ===== */
 .exp-title {
     text-align: center;
     font-size: 36px;
@@ -397,7 +398,6 @@ footer {
     position: relative;
 }
 
-/* underline */
 .exp-title::after {
     content: "";
     width: 60px;
@@ -407,7 +407,8 @@ footer {
     margin: 8px auto 0;
 }
 
-/* ===== GRID (3 COLUMN) ===== */
+/* ================= GRID (3 COLUMN) ================= */
+
 .timeline {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -416,98 +417,120 @@ footer {
     margin: auto;
 }
 
-/* remove old timeline line */
+/* old timeline remove */
 .timeline::before {
     display: none;
 }
 
-/* ===== CARD ITEM ===== */
 .timeline-item {
     display: block;
 }
 
-/* circle hidden */
+/* circle remove */
 .circle {
     display: none;
 }
 
-/* ===== CARD DESIGN ===== */
+/* ================= CARD DESIGN ================= */
+
 .content {
     background: #ffffff;
     color: black;
     padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     height: 100%;
+    position: relative;
+    overflow: hidden;
     transition: 0.3s;
-    border-top: 3px solid transparent;
 }
 
-/* hover effect */
+/* top gradient line */
+.content::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, purple, orange);
+}
+
+/* hover */
 .content:hover {
     transform: translateY(-6px);
-    border-top: 3px solid #a855f7;
 }
 
-/* ===== TEXT STYLE ===== */
+/* ================= TEXT STYLE ================= */
 
-/* Date */
+/* date */
 .date {
-    color: #a855f7;
+    color: #7c3aed;
     font-size: 14px;
-    margin-bottom: 5px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
-/* Title */
+/* title */
 .content h3 {
     margin: 5px 0;
     font-size: 20px;
 }
 
-/* Company (highlight line) */
+/* company (NO highlight, only color) */
 .company {
-    color: #a855f7;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin: 5px 0 10px;
+    background: linear-gradient(90deg, purple, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Description */
+/* description */
 .content p {
     color: #555;
     line-height: 1.6;
 }
 
-/* ===== TAGS ===== */
+/* ================= TAGS ================= */
+
 .tags {
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .tags span {
     display: inline-block;
-    background: #f1f1f1;
-    padding: 5px 10px;
+    padding: 6px 12px;
     margin: 4px;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 13px;
+    background: #f1f1f1;
+    color: #333;
     transition: 0.3s;
 }
 
+/* first tag special */
+.tags span:first-child {
+    background: linear-gradient(90deg, purple, orange);
+    color: white;
+}
+
+/* hover */
 .tags span:hover {
     background: linear-gradient(90deg, purple, orange);
     color: white;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================= RESPONSIVE ================= */
 
-/* Tablet */
+/* tablet */
 @media(max-width: 992px) {
     .timeline {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile */
+/* mobile */
 @media(max-width: 600px) {
     .timeline {
         grid-template-columns: 1fr;
