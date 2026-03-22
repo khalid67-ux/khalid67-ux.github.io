@@ -186,11 +186,40 @@ main {
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(155, 92, 255, 0.5);
 }
-/* ===== EDUCATION CARD FINAL DESIGN ===== */
+/* ===== EDUCATION SECTION ===== */
+
+/* Title */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin: 40px 0;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, purple, orange);
+    display: block;
+    margin: 8px auto 0;
+}
+
+/* Container (FIX: 3 cards per row) */
+.edu-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 20px 10%;
+    justify-items: center;
+}
+
+/* Card */
 .edu-card {
     background: #ffffff;
     padding: 25px;
-    width: 280px;
+    width: 100%;
+    max-width: 300px;
     border-radius: 12px;
     text-align: center;
     position: relative;
@@ -211,32 +240,44 @@ main {
     background: linear-gradient(90deg, purple, orange);
 }
 
-/* Hover */
+/* Hover Effect */
 .edu-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* 🎓 Degree Title */
+/* Title */
 .edu-card h3 {
     font-size: 17px;
     font-weight: 700;
     color: #6d28d9;
     margin-bottom: 8px;
-    line-height: 1.4;
 }
 
-/* 🏫 Institute Name */
+/* Institute */
 .edu-place {
     color: #f59e0b;
     font-weight: 600;
     margin-bottom: 5px;
 }
 
-/* 📅 Year */
+/* Year */
 .edu-year {
     color: #555;
     font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .edu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .edu-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 /* ===== SKILLS TITLE ===== */
 .section-title {
