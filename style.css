@@ -384,83 +384,136 @@ footer {
 }
 /* ===== EXPERIENCE SECTION ===== */
 .exp-section {
-    background: #0d1117;
-    color: white;
+    background: #ffffff;
+    color: black;
     padding: 80px 10%;
 }
 
+/* Title */
 .exp-title {
     text-align: center;
     font-size: 36px;
     margin-bottom: 50px;
-}
-
-/* ===== TIMELINE ===== */
-.timeline {
     position: relative;
-    margin-left: 30px;
 }
 
-.timeline::before {
+/* underline */
+.exp-title::after {
     content: "";
-    position: absolute;
-    left: 20px;
-    top: 0;
-    width: 2px;
-    height: 100%;
-    background: #a855f7;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, purple, orange);
+    display: block;
+    margin: 8px auto 0;
 }
 
-/* ===== ITEM ===== */
+/* ===== GRID (3 COLUMN) ===== */
+.timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* remove old timeline line */
+.timeline::before {
+    display: none;
+}
+
+/* ===== CARD ITEM ===== */
 .timeline-item {
-    display: flex;
-    margin-bottom: 40px;
-    position: relative;
+    display: block;
 }
 
-/* Circle */
+/* circle hidden */
 .circle {
-    width: 40px;
-    height: 40px;
-    background: #161b22;
-    border: 2px solid #a855f7;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 20px;
-    z-index: 1;
+    display: none;
 }
 
-/* Card */
+/* ===== CARD DESIGN ===== */
 .content {
-    background: #161b22;
+    background: #ffffff;
+    color: black;
     padding: 20px;
     border-radius: 12px;
-    width: 100%;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    height: 100%;
+    transition: 0.3s;
+    border-top: 3px solid transparent;
 }
+
+/* hover effect */
+.content:hover {
+    transform: translateY(-6px);
+    border-top: 3px solid #a855f7;
+}
+
+/* ===== TEXT STYLE ===== */
 
 /* Date */
 .date {
     color: #a855f7;
     font-size: 14px;
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
-/* Company */
+/* Title */
+.content h3 {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+/* Company (highlight line) */
 .company {
-    color: #00ffcc;
+    color: #a855f7;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-/* Tags */
+/* Description */
+.content p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* ===== TAGS ===== */
+.tags {
+    margin-top: 10px;
+}
+
 .tags span {
     display: inline-block;
-    background: #222;
+    background: #f1f1f1;
     padding: 5px 10px;
     margin: 4px;
     border-radius: 20px;
     font-size: 12px;
-    color: #00ffcc;
+    transition: 0.3s;
+}
+
+.tags span:hover {
+    background: linear-gradient(90deg, purple, orange);
+    color: white;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media(max-width: 992px) {
+    .timeline {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media(max-width: 600px) {
+    .timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .exp-section {
+        padding: 50px 20px;
+    }
 }
