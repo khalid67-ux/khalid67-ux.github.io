@@ -120,37 +120,72 @@ main {
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* ===== ABOUT SECTION IMPROVED ===== */
+.about-section {
+    padding: 80px 10%;
+    background: #0f0f1a;
+    color: white;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: orange;
+    display: block;
+    margin: 10px auto;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* LEFT */
+.about-text {
+    flex: 1;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #ccc;
+}
 
 .about-text span {
-    color: #9333ea;
+    color: #9b5cff;
     font-weight: bold;
 }
 
-/* Card style (আগের professional look) */
-.about-card {
-    background: #f3f4f6;
-    padding: 14px;
-    margin: 12px 0;
-    border-left: 5px solid #9333ea;
-    border-radius: 8px;
+/* CARDS */
+.about-cards .card {
+    background: #1a1a2e;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 10px;
     transition: 0.3s;
-    font-weight: 500;
 }
 
-/* Hover effect */
-.about-card:hover {
-    transform: translateX(6px);
-    background: #ede9fe;
+.about-cards .card:hover {
+    background: #2a2a40;
+    transform: translateX(5px);
 }
 
-/* About image polish */
-.about-right img {
-    width: 260px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+/* RIGHT IMAGE */
+.about-image img {
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(155, 92, 255, 0.5);
 }
-
 /* ================= EDUCATION ================= */
 .section-title {
     margin-bottom: 30px;
