@@ -859,9 +859,31 @@ footer {
     background: linear-gradient(90deg, #9333ea, orange);
     transition: 0.3s;
 }
-
 /* BUTTON HOVER */
 .project-btn:hover {
     opacity: 0.85;
     transform: scale(1.05);
+}
+
+.project-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.project-buttons a {
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: 500;
+    color: white;
+    background: linear-gradient(45deg, #7b2ff7, #f107a3, #ff8c00);
+    transition: 0.3s;
+}
+
+.project-buttons a:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
 }
