@@ -887,3 +887,13 @@ footer {
     transform: scale(1.05);
     opacity: 0.9;
 }
+
+
+.edu-place a {
+    color: #ff9800;
+    text-decoration: none;
+}
+
+.edu-place a:hover {
+    text-decoration: underline;
+}
