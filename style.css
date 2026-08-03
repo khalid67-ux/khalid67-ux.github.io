@@ -891,9 +891,11 @@ footer {
 
 .edu-place a {
     color: #ff9800;
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
 }
 
 .edu-place a:hover {
-    text-decoration: underline;
+    color: #ff9800;
 }
